@@ -1,0 +1,70 @@
+/* 
+* Step two in sequence. Needed to get data then clean it in Pandas first.
+* Sql File that creates Table for over doss in Connecticut.
+* Authors Acarie Jenkes, Carrie Bates, Corey Monsma, Parker Teske, and Stargily Bobby.
+*columns: id primary key for efficency.
+Date	DateType	Age	Sex	Race	Ethnicity	ResidenceCity	ResidenceCounty	ResidenceState
+InjuryCity	InjuryCounty	InjuryState	InjuryPlace	Description of Injury	DeathCity	DeathCounty
+DeathState	Location	LocationifOther	CauseofDeath	MannerofDeath	Other Significant Conditions
+Heroin	Heroindeathcertificate(DC)	Cocaine	Fentanyl	FentanylAnalogue	Oxycodone	Oxymorphone
+Ethanol	Hydrocodone	Benzodiazepine	Methadone	Meth/Amphetamine	Amphet	Tramad	Hydromorphone
+Morphine(NotHeroin)	Xylazine	Gabapentin	OpiateNOS	Heroin/Morph/Codeine	OtherOpioid	AnyOpioid
+Other	ResidenceCityGeo	InjuryCityGeo	DeathCityGeo
+*/
+-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+-- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
+
+CREATE TABLE "OverDose" (
+    "OpId" INTEGER   NOT NULL,
+    "Date" date   NOT NULL,
+    "DateType" varchar(25)   ,
+    "Age" int  NOT NULL,
+    "Sex" varchar(10)   ,
+    "Race" varchar(50)  ,
+    "Ethnicity" varchar(100)   ,
+    "ResidenceCity" varchar(50)   ,
+    "ResidenceCounty" varchar(50)   ,
+    "ResidenceState" varchar(50)  ,
+    "InjuryCity" varchar(50)   ,
+    "InjuryCounty" varchar(50)   ,
+    "InjuryState" varchar(50)   ,
+    "InjuryPlace" varchar(150)   ,
+    "DescriptionofInjury" varchar(500)   ,
+    "DeathCity" varchar(50)  ,
+    "DeathCounty" varchar(50)   ,
+    "DeathState" varchar(50)   ,
+    "Location" varchar(200)   ,
+    "LocationifOther" varchar(200)   ,
+    "CauseofDeath" varchar(500)   ,
+    "MannerofDeath" varchar(50)   ,
+    "OtherSignificantConditions" varchar(100)  ,
+    "Heroin" varchar(5)   ,
+    "Heroindeathcertificate(DC)" varchar(5)   ,
+    "Cocaine" varchar(5)   ,
+    "Fentanyl" varchar(5)  ,
+    "FentanylAnalogue" varchar(5)   ,
+    "Oxycodone" varchar(5)   ,
+    "Oxymorphone" varchar(5) ,
+    "Ethanol" varchar(5)  ,
+    "Hydrocodone" varchar(5)   ,
+    "Benzodiazepine" varchar(5) ,
+    "Methadone" varchar(5) ,
+    "Meth/Amphetamine" varchar(5) ,
+    "Amphet" varchar(5)   ,
+    "Tramad" varchar(5)   ,
+    "Hydromorphone" varchar(5)   ,
+    "Morphine(NotHeroin)" varchar(25)  ,
+    "Xylazine" varchar(5)  ,
+    "Gabapentin" varchar(5)  ,
+    "OpiateNOS" varchar(5)   ,
+    "Heroin/Morph/Codeine" varchar(5)  ,
+    "OtherOpioid" varchar(50)  ,
+    "AnyOpioid" varchar(5)   ,
+    "Other" varchar(150)   ,
+    "DeathCityGeo" varchar(150)   ,
+    "latitude" varchar(20),
+    "longitude" varchar(20),
+    CONSTRAINT "pk_OverDose" PRIMARY KEY (
+        "OpId"
+     )
+);

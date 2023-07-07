@@ -15,3 +15,11 @@ The questions you’ll ask of the data
 Possible source for the data
 1. CDC
 2. Data.gov
+
+# Notes:
+
+# Relational Database creation
+The file QuickDBD-export.sql was done by https://app.quickdatabasediagrams.com/#/
+Then exported. However, after data analsis of our csv and cleaned data from Pandas we had to adjust this into another sql file called Create_Over_Dose_Table.sql.  This file is located in the \Resources folder.
+
+After we created the table we imported the OD_data.csv using the import source.  Make sure we have headers set and , are the delimiters. 
