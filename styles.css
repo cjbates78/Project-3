@@ -1,18 +1,23 @@
-#header-image-menu{
+#top-header{
     top: 10px;
-    position: relative;
+    position: center ;
 }
  
-#header-image-menu img{
-    width: 100%;
+#logo{
+    width: 1575px;
     margin: none;
-    padding: none;
+    padding: 25px;
+    margin-left: 167px;
+    margin-right: 100px;
+    padding:60px;
+    border: 5px solid black;
+
 }
  
 #image-text{
     position: absolute;
-    top: 60%;
-    left: 60%;
+    top: 57%;
+    left: 40%;
     font-family: 'Roboto';
     color: #000;
     transform: translate(-30%, -30%);
@@ -24,10 +29,10 @@
   }
   
   .item {
-    width: 200px;
-    height: 200px;
+    width: 1500px;
+    height: 600px;
     margin: 50px auto;
-    padding-top: 75px;
+    padding-top: 200px;
     background: #ccc;
     text-align: center;
     color: #FFF;
