@@ -1,9 +1,9 @@
 CREATE TABLE economic (
- Years date not null,
+ Years varchar(4),
  TownCode int,
- Town varchar (250),
+ deathcity varchar (250),
  CensusUnits int,
- GovernmentAssisted int,
+ GovernmentAssisted float,
  TenantRentalAssistance int,
  SingleFamilyMortgages int,
  DeedRestrictedUnits int,
