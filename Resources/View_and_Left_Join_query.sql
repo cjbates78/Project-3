@@ -33,3 +33,17 @@ overdose.deathcity = economic.deathcity
 select * from overdose_afforable_housing;   
 
 
+-- Create View
+CREATE VIEW overdose_urban AS
+select overdose.date,
+	   overdose.anyopioid,
+	   overdose.deathcity,
+	   overdose.latitude,
+	   overdose.longitude,
+	   economic.percentaffordable
+FROM overdose
+INNER JOIN economic ON
+overdose.deathcity = economic.deathcity
+  where overdose.deathcity != 'N'
+   and overdose.anyopioid = 'Y'
+    order by overdose.date DESC;

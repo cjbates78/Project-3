@@ -15,6 +15,8 @@ The questions you’ll ask of the data
 Possible source for the data
 1. CDC
 2. Data.gov
+3. AOS data from https://github.com/michalsnik/aos/tree/next
+4. Pciture from Getty Images
 
 # Notes:
 
