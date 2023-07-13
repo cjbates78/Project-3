@@ -18,7 +18,6 @@ app = Flask(__name__)
 #################################################
 # Flask Routes
 #################################################
-#print(sqlalchemy.__version__)
 
 @app.route("/")
 #################################################
@@ -37,8 +36,8 @@ def index():
     cursor.execute(urban_data)
     results = cursor.fetchall()
 
-    opioid_od = {}
-    date_list = []
+    opioid_od = {} #opoid od dictionary
+    date_list = [] 
     any_opioid = []
     death_city = []
     latitude = []
@@ -56,7 +55,7 @@ def index():
      longitude.append(x[4])
      percent_affordable.append(x[5])
 
-    print(len(percent_affordable))   
+#    print(len(percent_affordable))   
 #create the data frame based on our lists of information from the OD database view 
 #overdose_urban.
     opioid_od = {"date":date_list,"any_opioid":any_opioid,"death_city":death_city,"latitude":latitude
@@ -66,13 +65,19 @@ def index():
     opioid_df['any_opioid'] = opioid_df['any_opioid'].map({'Y': 1})
 #    print(opioid_df.head(10))
 
-    summed_df = opioid_df.groupby(["death_city",'percent_affordable']).aggregate({"any_opioid":"sum"}).sort_values(by="any_opioid",ascending=False)
-#sort 
+    summed_df = opioid_df.groupby(["death_city",'percent_affordable',"latitude","longitude"]).aggregate({"any_opioid":"sum"}).sort_values(by="any_opioid",ascending=False)
+#sor
+    summed_df.reset_index()
+#    print(opioid_df.head()) 
+#    print(len(summed_df))
     print(summed_df.head())
+
+    correlations = summed_df.corr()
+    print(correlations)
 # Convert list of tup
     # les into normal list
 #    towns = list(np.ravel(results))
-    return render_template("index.html",var_html=opioid_df)
+    return render_template("index.html",var_html=summed_df)
 #    return jsonify(opioid_od)
 
 # 4. Define main behavior
