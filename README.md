@@ -17,6 +17,8 @@ Possible source for the data
 2. Data.gov
 3. AOS data from https://github.com/michalsnik/aos/tree/next
 4. Pciture from Getty Images
+5. geoJSON.io
+6. Ct.gov
 
 # Notes:
 
