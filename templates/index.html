@@ -1,24 +1,93 @@
-<html>
- 
-<head>
-    <title>FlaskTest</title>
-</head>
- 
-<body>
-    <h2>Welcome To my test</h2>
-    <table>
-        <tr>
-        <th>Deat City</th>
-        <th>Percent Affordable housing</th>
-        <th>Any Opiod over dose death</th>
-        </tr>
-        <tr>    
-        <td>{{var_html}}</td>
-        <td>a</td>
-        <td>b</td>
-        </tr>
-    
-    <h3>Welcome, {{var_html}}</h3>
-</body>
- 
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Drug Overdoses in Connecticut 2012-2022</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <div id="top-header">
+        <!-- Logo -->
+        <div id="logo">
+            <img src="./logo.jpg" />
+        </div>
+        <h1 id="image-text">
+            Drug Overdoes in Connecticut 2012-2022
+        </h1>
+  </head>
+  <body>
+    <div class="aos-all">
+        <div class="item" data-aos="fade-right">1</div>
+        <div class="item" data-aos="fade-left">
+            <table>
+                <tr>
+                 <th>any opiod</th>
+                 <th>percent affordable</th>
+                  <tr><td>{{opiods}}</td><td>{{percent_house}}</td></tr>
+            </table>    
+            <table>
+                <tr>
+                <th>Death City</th>
+                <th>|</th>
+                <th>Any Opiod over dose death</th>
+                <th>|</th>
+                <th>Percent Affordable housing</th>
+             </table>
+             <table>
+              {% for i in opiod_death%}  
+                <tr> 
+                <td> 
+                 {{i[0]}}
+                </td>
+                <td>
+                  |
+                </td>
+                <td>
+                {{i[1]}}    
+                </td>
+                <td>
+                  |
+                </td>        
+                <td>
+                 {{i[2]}}            
+                </td>   
+                </tr>
+              {% endfor %}  
+            </table>  
+        </div>
+<!-- put the graph in slide 3-->        
+        <div class="item" data-aos="flip-up">
+        </div>
+        <div class="item" data-aos="flip-down">4</div>
+        <div class="item" data-aos="flip-right">5</div>
+        <div class="item" data-aos="flip-right">6</div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="LinePlots.js"></script>
+
+    <script>
+      document.querySelector('html').classList.remove('no-js');
+      if (!window.Cypress) {
+        const scrollCounter = document.querySelector('.js-scroll-counter');
+
+        AOS.init({
+          mirror: true
+        });
+
+        document.addEventListener('aos:in', function(e) {
+          console.log('in!', e.detail);
+        });
+
+        window.addEventListener('scroll', function() {
+          scrollCounter.innerHTML = window.pageYOffset;
+        });
+      }
+    </script>  
+  </body>
 </html>
