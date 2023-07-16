@@ -42,5 +42,8 @@ The application uses Pandas Dataframes and correlations function to calculate th
 # *Notice index.html in the resources file has script variables that get passed from the urban_correlations.py
 
 # The web site was built
+Webpage_index.html was build using https://github.com/michalsnik/aos as a resource. We built the a header, using a piture from Getty Images and the JavaScript AOS library for the data visualizations.
 
 # The visual information is located and built
+1. 5 Deadlist Drug visual was build using the information from the LinePlots.js file, and ploting it with a Plotly linegraph
+2.  
