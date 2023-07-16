@@ -3,16 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Drug Overdoses in Connecticut 2012-2022</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     <div id="top-header">
         <!-- Logo -->
         <div id="logo">
-            <img src="Resources/logo.jpg" />
+            <img src="./logo.jpg" />
         </div>
         <h1 id="image-text">
             Drug Overdoes in Connecticut 2012-2022
@@ -31,7 +33,9 @@
             <table>
                 <tr>
                 <th>Death City</th>
+                <th>|</th>
                 <th>Any Opiod over dose death</th>
+                <th>|</th>
                 <th>Percent Affordable housing</th>
              </table>
              <table>
@@ -41,7 +45,13 @@
                  {{i[0]}}
                 </td>
                 <td>
+                  |
+                </td>
+                <td>
                 {{i[1]}}    
+                </td>
+                <td>
+                  |
                 </td>        
                 <td>
                  {{i[2]}}            
@@ -50,7 +60,9 @@
               {% endfor %}  
             </table>  
         </div>
-        <div class="item" data-aos="flip-up">3</div>
+<!-- put the graph in slide 3-->        
+        <div class="item" data-aos="flip-up">
+        </div>
         <div class="item" data-aos="flip-down">4</div>
         <div class="item" data-aos="flip-right">5</div>
         <div class="item" data-aos="flip-right">6</div>
@@ -76,6 +88,6 @@
           scrollCounter.innerHTML = window.pageYOffset;
         });
       }
-    </script>
+    </script>  
   </body>
 </html>

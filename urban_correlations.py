@@ -67,22 +67,26 @@ def index():
 
 #need to sum the opioid deaths by town    
     summed_opioids_df = opioid_df.groupby("death_city",as_index=False).sum()
-# drop the summed percentages.
-# drop('column_name', axis=1)
+
     summed_opioids_df.sort_values(by="any_opioid", ascending=False)
-#    print(summed_opioids_df.head())
+#had to adjust the percentages because the sum does all the numeric columns
+    summed_opioids_df["Affordable_Percent"] = summed_opioids_df["percent_affordable"] / summed_opioids_df["any_opioid"] 
+    ready_opioids_df = summed_opioids_df.drop('percent_affordable', axis=1)
+    ready_opioids_df = ready_opioids_df.sort_values(by="any_opioid",ascending=False)
+    print(ready_opioids_df.head())
+#need to drop the inflated housing afforable column    
 
 #pull out the correlations 
-    correlations = summed_opioids_df.corr()
+    correlations = ready_opioids_df.corr()
     opioid_cor = correlations["any_opioid"].values
 
-    percent_aff = correlations["percent_affordable"].values
-    affordable_h = opioid_df["percent_affordable"].values
+    percent_aff = correlations["Affordable_Percent"].values
     death_c = summed_opioids_df["death_city"].values
     opiod_s = summed_opioids_df["any_opioid"].values
-    
+
+
  #final data frame 
-    one_list = summed_opioids_df.values.tolist()
+    one_list = ready_opioids_df.values.tolist()
     return render_template("index.html",opiod_death=one_list,opiods=opioid_cor,percent_house=percent_aff)
 
 # 4. Define main behavior
