@@ -37,7 +37,8 @@ To create the Relational database:
 Please run the query first to make sure data returns and then created the view for report and further analysis.
 
 # The Flask Web Application uses templates and is located in the templates folder
-/templates/urban_correlations.py
+/templates/index.html
+The program runner is at the main level of the project in the python file urban_correlations.py
 The application uses Pandas Dataframes and correlations function to calculate the r2 or correlations percents as we compared opiod over dose deaths vs affordable housing concentrations.
 # *Notice index.html in the resources file has script variables that get passed from the urban_correlations.py
 
