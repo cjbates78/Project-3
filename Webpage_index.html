@@ -15,7 +15,7 @@
       integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
       crossorigin=""></script>
 <!-- Our CSS -->
-      <link rel="stylesheet" type="text/css" href="styles.css">
+      <link rel="stylesheet" type="text/css" href="Webpage_styles.css">
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -28,23 +28,31 @@
             Drug Overdoes in Connecticut 2012-2022
         </h1>
   </head>
+
   <body>
-    <button onclick=window.location.href="http://localhost:52330/male_femaledata/index1.html";>Male vs Female Map</button>
-    <button class="button button2">Corey's Info</button>
+    <div class="button">
+      <button onclick=window.location.href="http://localhost:52330/male_femaledata/index1.html";>Gender by County Map</button>
+      <button onclick=window.location.href="";>Corey's Info</button>
+    </div>
     <div class="aos-all">
-      <div class="item" data-aos="zoom-in">1</div>
-      <div class="item" data-aos="zoom-out">
-        <div id="PieGraph"></div>
+
+      <div class="item" data-aos="flip-left">
+        <div id="GenderPieGraph"></div>
           <img src="Male_Female_PieChart.png"/>
       </div>
-        <div class="item" data-aos="fade-right">
+
+
+      <div class="item" data-aos="fade-right">
           <div id="plot"></div>
             <script src="LinePlots.js"></script>
-        </div>
-        <div class="item" data-aos="flip-right">5</div>
-        <div class="item" data-aos="flip-right">6</div>
-          
       </div>
+
+
+      <div class="item" data-aos="fade-left">
+        <div id="AgePieGraph"></div>
+          <img src="Age Of Any Opioid Death in Connecticut.png"/>
+    </div>
+
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
