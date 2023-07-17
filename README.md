@@ -58,6 +58,6 @@ Webpage_index.html was build using https://github.com/michalsnik/aos as a resour
    
 ![image](https://github.com/cjbates78/Project-3/assets/117419179/b0670d0e-3393-4ab6-a7d9-edf5481bd519)
 
-5. male_femaledata | index html | link for Leaflet marker map:
+5. male_femaledata | index1 html | link for Leaflet marker map:
    http://127.0.0.1:5500/project3/Project-3/male_femaledata/index1.html
 
