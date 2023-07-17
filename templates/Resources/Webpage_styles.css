@@ -1,0 +1,41 @@
+#top-header{
+    top: 10px;
+    position: center ;
+}
+ 
+#logo{
+    width: 1575px;
+    margin: none;
+    padding: 25px;
+    margin-left: 167px;
+    margin-right: 100px;
+    padding:60px;
+    border: 5px solid black;
+
+}
+ 
+#image-text{
+    position: absolute;
+    top: 57%;
+    left: 40%;
+    font-family: 'Roboto';
+    color: #000;
+    transform: translate(-30%, -30%);
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .item {
+    width: 1000px;
+    height: 500px;
+    margin: 50px auto;
+    padding-top: 200px;
+    background: #fff;
+    text-align: center;
+    color: #FFF;
+    font-size: 3em;
+  }
+  

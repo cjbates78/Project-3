@@ -7,17 +7,17 @@
     width: 1575px;
     margin: none;
     padding: 25px;
-    margin-left: 167px;
+    margin-left: 1%;
     margin-right: 100px;
     padding:60px;
-    border: 5px solid black;
+    
 
 }
  
 #image-text{
     position: absolute;
-    top: 57%;
-    left: 40%;
+    top: 59%;
+    left: 20%;
     font-family: 'Roboto';
     color: #000;
     transform: translate(-30%, -30%);
@@ -35,7 +35,29 @@
     padding-top: 200px;
     background: #fff;
     text-align: center;
-    color: #FFF;
+    color: #0e0d0d;
     font-size: 3em;
   }
+
+  #map,
+  body,
+  html {
+    height: 100%;
+    width: 100%;
+  }
+
+  .button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .button1 {background-color: #008CBA;} /* Male vs Female Map */
+  .button2 {background-color: #008CBA;} /* Corey's Info */
   

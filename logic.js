@@ -11,7 +11,7 @@ var baseLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(myMap);
 
-var link = 'DataSets/total.json';
+var link = 'total.json';
 //ERROR: trying to read json with d3
 // Getting the data with d3
 var ODs = []
@@ -26,8 +26,10 @@ d3.json(link).then(function(response) {
          ODs.push([response[i].latitude, response[i].longitude])
          }
 
+         }
+
      }
- });
+ );
 var heat = L.heatLayer(ODs, {
     radius: 10,
     blur: 30

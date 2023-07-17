@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Drug Overdoses in Connecticut 2012-2022</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="Webpage_index.html" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCz
+      crossorigin="" />
+<!-- Leaflet JavaScript code -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""></script>
+<!-- Our CSS -->
+      <link rel="stylesheet" type="text/css" href="styles.css">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <div id="top-header">
+        <!-- Logo -->
+        <div id="logo">
+            <img src="Resources/logo.jpg" />
+        </div>
+        <h1 id="image-text">
+            Drug Overdoes in Connecticut 2012-2022
+        </h1>
+  </head>
+  <body>
+    <button onclick=window.location.href="http://localhost:52330/male_femaledata/index1.html";>Male vs Female Map</button>
+    <button class="button button2">Corey's Info</button>
+    <div class="aos-all">
+      <div class="item" data-aos="zoom-in">1</div>
+      <div class="item" data-aos="zoom-out">
+        <div id="PieGraph"></div>
+          <img src="Male_Female_PieChart.png"/>
+      </div>
+        <div class="item" data-aos="fade-right">
+          <div id="plot"></div>
+            <script src="LinePlots.js"></script>
+        </div>
+        <div class="item" data-aos="flip-right">5</div>
+        <div class="item" data-aos="flip-right">6</div>
+          
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+      document.querySelector('html').classList.remove('no-js');
+      if (!window.Cypress) {
+        const scrollCounter = document.querySelector('.js-scroll-counter');
+
+        AOS.init({
+          mirror: true
+        });
+
+        document.addEventListener('aos:in', function(e) {
+          console.log('in!', e.detail);
+        });
+
+        window.addEventListener('scroll', function() {
+          scrollCounter.innerHTML = window.pageYOffset;
+        });
+      }
+    </script>
+  </body>
+</html>
