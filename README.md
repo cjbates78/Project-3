@@ -56,4 +56,5 @@ Webpage_index.html was build using https://github.com/michalsnik/aos as a resour
 4. final result in 2022
 
    
-![image](https://github.com/cjbates78/Project-3/assets/117419179/564b7520-92c3-4b80-9139-d4e3584c0306)
+![image](https://github.com/cjbates78/Project-3/assets/117419179/b0670d0e-3393-4ab6-a7d9-edf5481bd519)
+
