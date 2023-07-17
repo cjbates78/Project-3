@@ -11,6 +11,7 @@ The questions you’ll ask of the data
 1. Which age group has the highest amount of overdoses per year
 2. Do males or females have a greater amount of overdoses per year, and by what percentage
 3. Top three counties for overdoses compared to median income of county
+4. what are the top 5 opioids find in autopsy reports
 
 Possible source for the data
 1. CDC
@@ -52,9 +53,16 @@ Webpage_index.html was build using https://github.com/michalsnik/aos as a resour
 # Percentage of males or females overdose death count in connecticut
 1. use geojson.io to find the latitude and longitude of county in connecticut
 2. Extract the data of the count of male and female from pandas dataframe
-3. barchart and piechart for the overdose death percentage of males and females 
-4. final result in 2022
+3. barchart for the overdose death count in each county in connecticut 2022
+ 
+![image](https://github.com/cjbates78/Project-3/assets/117419179/06d1c1eb-6991-4819-bf7f-a48424784acc)
+
+
+4.pie chart for males vs females death percent in connecticut 2022
 
    
 ![image](https://github.com/cjbates78/Project-3/assets/117419179/b0670d0e-3393-4ab6-a7d9-edf5481bd519)
+
+5. male_femaledata | index1 html | link for Leaflet marker map:
+   http://127.0.0.1:5500/project3/Project-3/male_femaledata/index1.html
 
