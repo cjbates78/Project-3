@@ -17,7 +17,7 @@ Possible source for the data
 2. Data.gov
 3. AOS data from https://github.com/michalsnik/aos/tree/next
 4. Picture from Getty Images
-5. geoJSON.io
+5. geojson.io
 
 
 # Notes:
@@ -48,3 +48,10 @@ Webpage_index.html was build using https://github.com/michalsnik/aos as a resour
 # The visual information is located and built
 1. 5 Deadlist Drug visual was build using the information from the LinePlots.js file, and ploting it with a Plotly linegraph
 2.  
+
+# Percentage of males or females overdose death count in connecticut
+1. use geojson.io to find the latitude and longitude of county in connecticut
+2. Extract the data of the count of male and female from pandas dataframe
+3. barchart and piechart for the overdose death percentage of males and females 
+4. final result in 2022
+![image](https://github.com/cjbates78/Project-3/assets/117419179/564b7520-92c3-4b80-9139-d4e3584c0306)
