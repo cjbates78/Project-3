@@ -46,9 +46,8 @@ The application uses Pandas Dataframes and correlations function to calculate th
 # The web site was built
 Webpage_index.html was build using https://github.com/michalsnik/aos as a resource. We built the a header, using a piture from Getty Images and the JavaScript AOS library for the data visualizations.
 
-# The visual information is located and built
+# Top 5 Drug visual
 1. 5 Deadlist Drug visual was build using the information from the LinePlots.js file, and ploting it with a Plotly linegraph
-2.  
 
 # Percentage of males or females overdose death count in connecticut
 1. use geojson.io to find the latitude and longitude of county in connecticut
