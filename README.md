@@ -41,7 +41,7 @@ Please run the query first to make sure data returns and then created the view f
 /templates/index.html
 The program runner is at the main level of the project in the python file urban_correlations.py
 The application uses Pandas Dataframes and correlations function to calculate the r2 or correlations percents as we compared opiod over dose deaths vs affordable housing concentrations.
-# *Notice index.html in the resources file has script variables that get passed from the urban_correlations.py
+### *Notice index.html in the resources file has script variables that get passed from the urban_correlations.py
 
 ## The web site was built
 Webpage_index.html was build using https://github.com/michalsnik/aos as a resource. We built the a header, using a piture from Getty Images and the JavaScript AOS library for the data visualizations.
