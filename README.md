@@ -26,7 +26,7 @@ The kind of data you’d like to work with and the field you’re interested in 
 ## Relational Database creation
 The file QuickDBD-export.sql was done by https://app.quickdatabasediagrams.com/#/
 Then exported. However, after data analsis of our csv and cleaned data from Pandas we had to adjust this into another sql file called Create_Over_Dose_Table.sql.  This file is located in the \Resources folder.
-# *Notice the csv files for import were cleaned by the two juypter note books before import into the Relational Database Management System.
+### Notice the csv files for import were cleaned by the two juypter note books before import into the Relational Database Management System.
 1. CleanData1.pynb that uses the Connecticut overdose csv file to create OD_Data.csv
 2. CleanAffordableHousing.ipyb that uses the affordable housing csv file to create clean_housing.csv
 
