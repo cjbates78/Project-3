@@ -1,4 +1,4 @@
-# Project-3
+# Drug Overdose in Connecticut
 Project scope:
 The aim of our project is to uncover patterns of drug overdoeses in Connecticut. We’ll examine relationships between types of drugs, ages groups, gender and other related relationships derived from the data, within Connecticut.
 
